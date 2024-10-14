@@ -1,0 +1,24 @@
+// Factorial
+
+// Get n
+ask;
+
+// Store initial total
+push 1;
+store total;
+
+loop:
+    dup;
+    push total;
+    mul;
+    store total;
+    push 1;
+    sub;
+    dup;
+    jumpf done;
+    jump loop;
+
+done:
+    push total;
+    print;
+    stop;
